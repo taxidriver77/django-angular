@@ -10,7 +10,7 @@ class LoginView(views.APIView):
     def post(self, request, format=None):
         serializer_class = get_user_serialiser()
         model_class = get_user_model()
-        data = json.loads(request.body)
+        data = request.data
         username = data.get(model_class.USERNAME_FIELD, None)
         password = data.get('password', None)
         user = authenticate(**{model_class.USERNAME_FIELD: username, 'password': password})

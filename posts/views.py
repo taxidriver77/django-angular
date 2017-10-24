@@ -14,8 +14,8 @@ from posts.serializers import PostSerializer, PostSerializerNonAuth
 
 
 class PostsView(ModelViewSet):
-    parser_classes = (parsers.JSONParser,)
-    renderer_classes = (renderers.JSONRenderer,)
+    #parser_classes = (parsers.JSONParser,)
+    #renderer_classes = (renderers.JSONRenderer,)
     queryset = Post.objects
 
     def __init__(self, **kwargs):

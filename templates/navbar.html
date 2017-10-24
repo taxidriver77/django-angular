@@ -19,12 +19,13 @@
                             href="/profile/+{{auth.getAuthenticatedAccount().id }}">+{{ auth.getAuthenticatedAccount().username }}</a></li>
                     <li ng-class="{active: navbarCtrl.location == '/+' + auth.getAuthenticatedAccount().id +'/settings'}" ng-show="auth.isAuthenticated()"><a
                             href="/profile/+{{ auth.getAuthenticatedAccount().id }}/settings">Settings</a></li>
+                    <li ng-class="{active: navbarCtrl.location == '/scrumboard'}" ><a href="/scrumboard">Scrumboard</a></li>
+                    <li ng-class="{active: navbarCtrl.location == '/customers'}" ><a href="/customers">Customers</a></li>
                     <li><a href="javascript:void(0)" ng-click="navbarCtrl.logout()" ng-show="auth.isAuthenticated()">Logout</a></li>
                     {% endverbatim %}
                 <!-- User is anonymous -->
                     <li ng-class="{active: navbarCtrl.location == '/login'}" ng-hide="auth.isAuthenticated()"><a href="/login">Login</a></li>
                     <li ng-class="{active: navbarCtrl.location == '/register'}" ng-hide="auth.isAuthenticated()"><a href="/register">Register</a></li>
-
             </ul>
         </div>
     </div>

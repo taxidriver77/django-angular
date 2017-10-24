@@ -14,5 +14,6 @@ router.register(r'posts', PostsView, base_name='post')
 urlpatterns = [
     url(r'^api/v1/', include(router.urls)),
     url(r'^api/v1/auth/', include(mongo_auth_urls)),
+    url(r'^scrumboard/', include('scrumboard.urls')),
     url('^.*$', IndexView.as_view(), name='index'),
 ]

@@ -22,6 +22,18 @@
                 controllerAs: 'loginCtrl',
                 templateUrl: '/static/templates/authentication/login.html'
             })
+            .when('/scrumboard', {
+                controller: 'ScrumboardController',
+                templateUrl: '/static/templates/scrumboard/scrumboard.html'
+            })
+            .when('/customers', {
+                controller: 'CustomersController',
+                templateUrl: '/static/templates/analytic/customers.html'
+            })
+            .when('/customers/:customerId/history', {
+                controller: 'HistoryController',
+                templateUrl: '/static/templates/analytic/history.html'
+            })
             .when('/', {
                 controller: 'IndexController',
                 controllerAs: 'indexCtrl',

@@ -15,13 +15,16 @@ INTERNAL_IPS = ('127.0.0.1',)
 
 INSTALLED_APPS = (
     'django.contrib.sessions',
+    'django.contrib.messages',
     'django.contrib.staticfiles',
     'mongo_auth',
     'rest_framework',
     'rest_framework_mongoengine',
     'authentication',
     'gulpstatic',
-    'posts'
+    'posts',
+    'scrumboard',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -109,3 +112,5 @@ SESSION_ENGINE = 'mongo_sessions.engine'
 
 ENABLE_SSE = os.environ.get('DJANGO_ENABLE_SSE', 'False') == 'True'
 REDIS_SSE_CHANNEL = 'posts_channel'
+
+

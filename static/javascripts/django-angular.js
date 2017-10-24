@@ -7,6 +7,8 @@
             'django-angular.config',
             'django-angular.layout',
             'django-angular.posts',
+            'django-angular.analytic',
+            'django-angular.scrumboard',
             'django-angular.utils',
             'django-angular.profiles'
         ]);

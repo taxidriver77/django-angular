@@ -40,7 +40,7 @@ class UsersView(ModelViewSet):
         if self.request.method == 'POST':
             return (permissions.AllowAny(),)
 
-        return permissions.IsAuthenticated(), IsAccountOwner()
+        return (permissions.IsAuthenticated(), IsAccountOwner(),)
 
     def list(self, request, *args, **kwargs):
         ds = self.get_serializer_class()(User.objects, many=True)
