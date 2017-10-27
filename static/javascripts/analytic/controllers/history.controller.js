@@ -14,7 +14,7 @@
 
         $scope.customerId = $routeParams.customerId;
 
-        Customers.get($scope.customerId).then(CustomerInfoSuccessFn, CustomerInfoErrorFn);
+        /*Customers.get($scope.customerId).then(CustomerInfoSuccessFn, CustomerInfoErrorFn);
         Customers.getHistory($scope.customerId).then(HistoryCustomersSuccessFn, HistoryCustomersErrorFn);
 
         function HistoryCustomersSuccessFn(response, status, headers, config) {
@@ -36,7 +36,7 @@
         function CustomerInfoErrorFn(response, status, headers, config) {
              alert("failure");
              Snackbar.error("failure to retrieve customer data");
-        }
+        }*/
 
         $scope.$watch('log', function() {
              console.log($scope.log );

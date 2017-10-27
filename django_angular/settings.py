@@ -24,6 +24,7 @@ INSTALLED_APPS = (
     'gulpstatic',
     'posts',
     'scrumboard',
+    'analytic',
 
 )
 
@@ -50,6 +51,11 @@ DATABASES = {
 MONGO_DB_NAME = 'django_angular'
 
 mongoengine.connect(MONGO_DB_NAME, connect=False)
+
+#mongoengine.connect('organic-azuki-mongodb',
+#                    username='application',
+#                    password='organic-azuki',
+#                    host='mongodb://application:organic-azuki@ds159254.mlab.com:59254/organic-azuki-mongodb')
 
 LANGUAGE_CODE = 'en-us'
 

@@ -1,16 +1,14 @@
 <div class="row">
-    <h3> Last year orders (date {{date  }}) </h3>
-    <div ng-repeat="customer in customers | filter: { registration: date }">
-        <p> {{ customer.nice_name }} </p>
-    </div>
-    <br>
+    <!--h3> Last year orders (date {{date}}) </h3>
+    <br-->
     <h3> Customers list and history</h3>
     <ul>
         <li ng-repeat="customer in customers">
-            <p> {{ customer.nice_name }} (mail: {{ customer.mail }})
-                <a href="/customers/{{ customer.id }}/history">history</a><br/></p>
+            <p> {{ customer.nice_name }} (mail: {{ customer.mail }}, registration: {{ customer.registration}})
+                <a href="/orders/">orders</a><br/></p>
         </li>
     </ul>
 
+    <!--h3> customers {{customers}} </h3-->
     <!--h4> logs :{{ log }} </h4-->
 </div>

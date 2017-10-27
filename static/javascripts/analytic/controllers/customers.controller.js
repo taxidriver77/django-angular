@@ -13,9 +13,14 @@
      */
     function CustomersController($scope, $http, $log,Customers,Snackbar) {
 
-        var lastYearDate = new Date();
+        $http.get('/api/v1/customers/').then(function(response){
+               $scope.customers = response.data;
+               $scope.log = $scope.customers;
+        });
+
+        /*var lastYearDate = new Date();
         lastYearDate.setFullYear(lastYearDate.getFullYear()-1);
-        $scope.date = Math.round(lastYearDate.getTime()/1000);
+        $scope.date = Math.round(lastYearDate.getTime()/1000);*/
         //moment(new Date()).isAfter(lastYearDate);
 
         /*$http({
@@ -31,7 +36,7 @@
                 alert("failure");
         });*/
 
-       Customers.getAll().then(AllCustomersSuccessFn, AllCustomersErrorFn);
+       /*Customers.getAll().then(AllCustomersSuccessFn, AllCustomersErrorFn);
 
        function AllCustomersSuccessFn(response, status, headers, config) {
              $scope.customers = response.data.customers;
@@ -42,11 +47,11 @@
        function AllCustomersErrorFn(response, status, headers, config) {
               alert("failure");
               Snackbar.error("failure to retrieve data");
-       }
+       }*/
 
-        /*$scope.$watch('log', function() {
+        $scope.$watch('log', function() {
              console.log($scope.log );
-        });*/
+        });
 
     }
 
