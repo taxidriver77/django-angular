@@ -15,7 +15,7 @@
 
         $http.get('/api/v1/customers/').then(function(response){
                $scope.customers = response.data;
-               $scope.log = $scope.customers;
+               //$scope.log = $scope.customers;
         });
 
         /*var lastYearDate = new Date();
@@ -47,11 +47,11 @@
        function AllCustomersErrorFn(response, status, headers, config) {
               alert("failure");
               Snackbar.error("failure to retrieve data");
-       }*/
+       }
 
         $scope.$watch('log', function() {
              console.log($scope.log );
-        });
+        });*/
 
     }
 

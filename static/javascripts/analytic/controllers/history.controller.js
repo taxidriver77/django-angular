@@ -14,6 +14,16 @@
 
         $scope.customerId = $routeParams.customerId;
 
+        $http.get('/api/v1/customers/'+ $scope.customerId + '/').then(function(response){
+               $scope.customer = response.data;
+               //$scope.log = $scope.orders;
+        });
+
+        $http.get('/api/v1/orders/?customer='+ $scope.customerId).then(function(response){
+               $scope.orders = response.data;
+               //$scope.log = $scope.orders;
+        });
+
         /*Customers.get($scope.customerId).then(CustomerInfoSuccessFn, CustomerInfoErrorFn);
         Customers.getHistory($scope.customerId).then(HistoryCustomersSuccessFn, HistoryCustomersErrorFn);
 

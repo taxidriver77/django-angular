@@ -30,7 +30,7 @@
                 controller: 'CustomersController',
                 templateUrl: '/static/templates/analytic/customers.html'
             })
-            .when('/customers/:customerId/history', {
+            .when('/orders/:customerId/', {
                 controller: 'HistoryController',
                 templateUrl: '/static/templates/analytic/history.html'
             })

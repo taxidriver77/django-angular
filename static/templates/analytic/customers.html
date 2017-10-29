@@ -1,11 +1,15 @@
 <div class="row">
     <!--h3> Last year orders (date {{date}}) </h3>
     <br-->
-    <h3> Customers list and history</h3>
+    <div>
+        <h3 class="content-title"> Customers and orders history</h3>
+    </div>
+
     <ul>
-        <li ng-repeat="customer in customers">
-            <p> {{ customer.nice_name }} (mail: {{ customer.mail }}, registration: {{ customer.registration}})
-                <a href="/orders/">orders</a><br/></p>
+        <li class="customer-item" ng-repeat="customer in customers">
+            <p> >> {{ customer.nice_name }} ( mail: {{ customer.mail }}, registered on: {{ customer.registration}})
+                <strong><a href="/orders/{{ customer.customerId }}/">orders</a><br/></strong>
+            </p>
         </li>
     </ul>
 
