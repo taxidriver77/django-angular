@@ -1,5 +1,5 @@
 coverage==4.4.1
-Django==1.8.18
+Django==1.11.28
 django-mongonaut==0.2.20
 -e git+https://github.com/umutbozkurt/django-rest-framework-mongoengine.git@d4a13e35490639c2435f2ec351182957a12dc0e4#egg=django_rest_framework_mongoengine
 djangorestframework==3.7.0
